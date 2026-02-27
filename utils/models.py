@@ -101,6 +101,8 @@ def set_model(args, logger):
     
     # Wrap with GAT enhancement
     model = SWATModelWithGAT(model)
+    # Ensure the newly added GAT layers are also moved to the GPU
+    model.to(args.device)
     logger.info("Integrated GAT (Graph Attention Network) for Stage-Wise Finetuning.")
 
     return model, preprocess, tokenizer
