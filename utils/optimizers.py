@@ -167,7 +167,7 @@ class _BaseWarmupScheduler(_LRScheduler):
     ):
         self.successor = successor
         self.warmup_epoch = warmup_epoch
-        super().__init__(optimizer, last_epoch, verbose)
+        super().__init__(optimizer, last_epoch=last_epoch, verbose=verbose)
 
     def get_lr(self):
         raise NotImplementedError
@@ -193,7 +193,7 @@ class LinearWarmupScheduler(_BaseWarmupScheduler):
     ):
         self.min_lr = min_lr
         super().__init__(
-            optimizer, successor, warmup_epoch, last_epoch, verbose
+            optimizer, successor, warmup_epoch, last_epoch=last_epoch, verbose=verbose
         )
 
     def get_lr(self):
