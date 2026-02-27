@@ -21,6 +21,7 @@ NUM_CLASSES_DICT = {
     "oxford_pets": 37,
     'imagenet': 1000,
     'semi-inat-2021': 810,
+    'tlu_states': 23,
 }
 
 # def load_dataset(dataset, dataset_root, split, preprocess, tokenized_text_prompts,

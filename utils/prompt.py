@@ -385,7 +385,8 @@ TEMPLATES_DIC = {
     'semi-aves': semi_aves_templates,
     'caltech101': caltech101_templates,
     'eurosat': eurosat_templates,
-    'sun397': sun397_templates
+    'sun397': sun397_templates,
+    'tlu_states': imagenet_templates
 }
 
 
