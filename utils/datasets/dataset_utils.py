@@ -141,18 +141,19 @@ class MyDataset(Dataset):
         lines = []
         for file, path in zip(file_list, path_list):
             with open(os.path.join(self.dataset_root, file), 'r') as f:
-                line = f.readlines()
-                # prepend the path to the each line !!!
-                line = [os.path.join(path, l) for l in line]
-            lines.extend(line)
-
-        self.data = []
-        self.labels = []
-        for line in lines:
-            path, id, is_fewshot = line.strip('\n').split(' ')
-            file_path = path
-            self.data.append((file_path, int(id), int(is_fewshot)))
-            self.labels.append(int(id))
+                content = f.readlines()
+                for l in content:
+                    l = l.strip('\n')
+                    if not l: continue
+                    parts = l.split(' ')
+                    is_fewshot = parts[-1]
+                    label_id = parts[-2]
+                    img_path = ' '.join(parts[:-2])
+                    if not os.path.isabs(img_path):
+                        img_path = os.path.join(path, img_path)
+                    lines.append((img_path, int(label_id), int(is_fewshot)))
+        self.data = lines
+        self.labels = [item[1] for item in self.data]
         
         self.targets = self.labels  # Sampler needs to use targets
 
