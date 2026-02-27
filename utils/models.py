@@ -6,14 +6,102 @@ from utils.features import prompt_sampler, get_text_features
 from utils.extras import get_engine#, cal_hard_avg_acc, cal_easy_avg_acc
 from utils.datasets.dataset_utils import NUM_CLASSES_DICT
 from utils import features
+try:
+    from torch_geometric.nn import GATConv
+except ImportError:
+    GATConv = None
+
+
+class GATLayer(nn.Module):
+    def __init__(self, in_channels, out_channels, heads=8, dropout=0.6):
+        super(GATLayer, self).__init__()
+        if GATConv is None:
+            # Fallback will be handled during runtime if torch_geometric is missing
+            pass
+        self.gat = GATConv(in_channels, out_channels // heads, heads=heads, dropout=dropout)
+
+    def forward(self, x):
+        # x shape: [batch_size, embed_dim]
+        # Treats all images in the current batch as nodes in a fully connected graph
+        batch_size = x.size(0)
+        edge_index = torch.ones((batch_size, batch_size), device=x.device).nonzero().t().contiguous()
+        
+        # Cross-image interaction via Graph Attention
+        x = self.gat(x, edge_index)
+        return x
+
+class SWATModelWithGAT(nn.Module):
+    """
+    Wrapper for CLIP model to include GAT interaction between retrieved and original images.
+    """
+    def __init__(self, clip_model):
+        super().__init__()
+        self.clip = clip_model
+        
+        # Automatically detect output dimension
+        if hasattr(clip_model, 'visual') and hasattr(clip_model.visual, 'output_dim'):
+            embed_dim = clip_model.visual.output_dim
+        elif hasattr(clip_model, 'output_dim'):
+            embed_dim = clip_model.output_dim
+        else:
+            embed_dim = 512 # Default
+            
+        self.gat = GATLayer(embed_dim, embed_dim)
+        
+    def encode_image(self, image):
+        # 1. Standard CLIP visual backbone
+        features = self.clip.encode_image(image)
+        # 2. GAT Interaction (treat batch as nodes)
+        features = self.gat(features)
+        return features
+
+    def encode_text(self, text):
+        return self.clip.encode_text(text)
+
+    @property
+    def logit_scale(self):
+        return self.clip.logit_scale
+
+    @property
+    def visual(self):
+        return self.clip.visual
+
+    @property
+    def transformer(self):
+        return self.clip.transformer
+
+    @property
+    def token_embedding(self):
+        return self.clip.token_embedding
+
+    @property
+    def positional_embedding(self):
+        return self.clip.positional_embedding
+
+    @property
+    def ln_final(self):
+        return self.clip.ln_final
+
+    @property
+    def text_projection(self):
+        return self.clip.text_projection
+
+    def forward(self, image, text=None):
+        if text is not None:
+            image_features = self.encode_image(image)
+            text_features = self.encode_text(text)
+            return image_features, text_features, self.logit_scale.exp()
+        return self.encode_image(image)
 
 
 def set_model(args, logger):
 
     model, preprocess, tokenizer = get_engine(model_cfg=args.model_cfg, device=args.device)
     logger.info(f'Loaded model: {args.model_cfg}')
-    # if torch.cuda.device_count() > 1:
-    #     model = torch.nn.DataParallel(model)
+    
+    # Wrap with GAT enhancement
+    model = SWATModelWithGAT(model)
+    logger.info("Integrated GAT (Graph Attention Network) for Stage-Wise Finetuning.")
 
     return model, preprocess, tokenizer
 

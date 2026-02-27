@@ -38,7 +38,7 @@ def set_optimizer(args, params, train_loader):
 def set_params(args, model, classifier_head, logger, dataset_classifier_head=None):
 
     params_classifier = [{'params': classifier_head.parameters(), 'lr': args.lr_classifier}]
-    params_visual = [{'params': model.visual.parameters(), 'lr': args.lr_backbone}]
+    params_visual = [{'params': list(model.visual.parameters()) + list(model.gat.parameters()), 'lr': args.lr_backbone}]
     # params_transformer = [{'params': model.transformer.parameters(), 'lr': args.lr_backbone}]
     if dataset_classifier_head is not None:
         params_dataset_classifier = [{'params': dataset_classifier_head.parameters(), 'lr': args.lr_classifier}]
