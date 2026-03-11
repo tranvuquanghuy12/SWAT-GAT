@@ -1,0 +1,94 @@
+{
+    "0": {
+        "most_common_name": "america apple",
+        "name": "america apple"
+    },
+    "1": {
+        "most_common_name": "america grape",
+        "name": "america grape"
+    },
+    "2": {
+        "most_common_name": "america orange",
+        "name": "america orange"
+    },
+    "3": {
+        "most_common_name": "australia orange",
+        "name": "australia orange"
+    },
+    "4": {
+        "most_common_name": "china potato",
+        "name": "china potato"
+    },
+    "5": {
+        "most_common_name": "china strawberry",
+        "name": "china strawberry"
+    },
+    "6": {
+        "most_common_name": "china apple",
+        "name": "china apple"
+    },
+    "7": {
+        "most_common_name": "china grape",
+        "name": "china grape"
+    },
+    "8": {
+        "most_common_name": "dalat potato",
+        "name": "dalat potato"
+    },
+    "9": {
+        "most_common_name": "dalat strawberry",
+        "name": "dalat strawberry"
+    },
+    "10": {
+        "most_common_name": "japan apple",
+        "name": "japan apple"
+    },
+    "11": {
+        "most_common_name": "japan grape",
+        "name": "japan grape"
+    },
+    "12": {
+        "most_common_name": "japan orange",
+        "name": "japan orange"
+    },
+    "13": {
+        "most_common_name": "korea grape",
+        "name": "korea grape"
+    },
+    "14": {
+        "most_common_name": "korea orange",
+        "name": "korea orange"
+    },
+    "15": {
+        "most_common_name": "netherlands apple",
+        "name": "netherlands apple"
+    },
+    "16": {
+        "most_common_name": "newzealand apple",
+        "name": "newzealand apple"
+    },
+    "17": {
+        "most_common_name": "other potato",
+        "name": "other potato"
+    },
+    "18": {
+        "most_common_name": "southafrica apple",
+        "name": "southafrica apple"
+    },
+    "19": {
+        "most_common_name": "southafrica grape",
+        "name": "southafrica grape"
+    },
+    "20": {
+        "most_common_name": "vietnam apple",
+        "name": "vietnam apple"
+    },
+    "21": {
+        "most_common_name": "vietnam grape",
+        "name": "vietnam grape"
+    },
+    "22": {
+        "most_common_name": "vietnam orange",
+        "name": "vietnam orange"
+    }
+}

@@ -1,0 +1,23 @@
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\america_apple\z4521086931070_e3e1d40946461ce6116bb7c6eb71b7d2.jpg 0 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\america_grape\z4521329952010_c627762f8557bdb12828a22ce8b47273.jpg 1 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\america_orange\z4523860810482_5b21566ef163c33e963142493dac836c.jpg 2 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\australia_orange\z4523949786042_65cac631411aa1a0c226d2d6e3b4696d.jpg 3 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\china-potato\IMG_6890.jpg 4 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\china-strawberry\cc299b318699f74bc918051052eda0d2.jpeg 5 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\china_apple\ttq35.jpg 6 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\china_grape\ntq6.jpg 7 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\dalat-potato\Khoai tay hong (14).jpg 8 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\dalat-strawberry\IMG_5869.JPG 9 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\japan_apple\z4533120695842_78d2d4bb49de4773d29699cf8684d7e4.jpg 10 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\japan_grape\z4532718272402_6bcfb2bf3d15331d804a2467075140c7.jpg 11 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\japan_orange\z4523986985301_c5a2457a7fb39d356e06ead5e88f9595.jpg 12 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\korea_grape\z4532646974755_d3c202849c75b9360da3f908be7e0c4b.jpg 13 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\korea_orange\z4533842197348_17c463cc788c52fe957e7c093b7ebf03.jpg 14 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\netherlands_apple\z4521133466834_ce384a0212d7325680ed945d644ab672.jpg 15 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\newzealand_apple\z4533801707169_9223c79e9d8c219cd70ef5644e06a9ac.jpg 16 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\other-potato\r_56_100263413413.jpg 17 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\southafrica_apple\z4521201470640_93c4e2b30da812e473b8f58d5d09befd.jpg 18 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\southafrica_grape\z4529586972289_4c7a54874ade9fc240493325d9c8cece.jpg 19 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\vietnam_apple\tvn29.jpg 20 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\vietnam_grape\nvn43.jpg 21 1
+c:\Users\My Computer\Downloads\Dự án TAD-AI-2\tlu-states_2\images\vietnam_orange\cvn27.jpg 22 1
