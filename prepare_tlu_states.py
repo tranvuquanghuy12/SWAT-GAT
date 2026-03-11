@@ -83,7 +83,7 @@ def prepare_tlu_states(data_root, target_dir):
         
     # Also create fewshot splits like prepare_fewshot_txt.py does
     for seed in [1, 2, 3]:
-        for ct in [1, 2, 4, 8, 16]:
+        for ct in [1, 2, 4, 8, 16, 50, 100]:
             random.seed(seed)
             fewshot_lines = []
             for cls_id, imgs in images_by_class.items():
